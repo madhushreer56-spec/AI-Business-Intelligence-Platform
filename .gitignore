@@ -1,0 +1,25 @@
+# Virtual Environment
+venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+
+# Uploaded files
+uploads/
+
+# Database
+database/business.db
+
+# VS Code
+.vscode/
+
+# Streamlit cache
+.streamlit/
+
+# OS
+.DS_Store
+Thumbs.db
