@@ -2,11 +2,11 @@ streamlit
 pandas
 numpy
 plotly
-scikit-learn
 matplotlib
+scikit-learn
 openpyxl
 xlsxwriter
-fpdf
-google-genai
-python-dotenv
 tabulate
+python-dotenv
+google-genai
+reportlab
