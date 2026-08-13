@@ -17,49 +17,47 @@ An AI-powered Business Intelligence Platform that enables users to upload busine
 - 🕒 Chat History
 - 🎨 Modern responsive UI with dark theme
 
----
-
 ## 🖼 Application Screenshots
 
 ### 🔐 Login Page
 
-![Login](screenshots/login.png)
+![Login Page](screenshots/login.png.png)
 
 ---
 
 ### 🏠 Home Dashboard
 
-![Home](screenshots/home.png)
+![Home Dashboard](screenshots/home.png.png)
 
 ---
 
 ### 🤖 AI Assistant
 
-![AI Assistant](screenshots/ai_input.png)
+![AI Assistant](screenshots/ai_input.png.png)
 
 ---
 
 ### 🧹 AI Data Cleaner
 
-![Cleaner](screenshots/cleaner.png)
+![AI Data Cleaner](screenshots/cleaner.png.png)
 
 ---
 
 ### 📊 Analytics Dashboard
 
-![Analytics](screenshots/analytics.png)
+![Analytics Dashboard](screenshots/analytics.png.png)
 
 ---
 
 ### 📈 Sales Prediction
 
-![Prediction](screenshots/prediction.png)
+![Sales Prediction](screenshots/prediction.png.png)
 
 ---
 
 ### 📄 Reports
 
-![Reports](screenshots/reports.png)
+![Reports](screenshots/reports.png.png)
 
 ---
 
@@ -189,11 +187,4 @@ AI & Machine Learning Enthusiast
 GitHub:
 https://github.com/madhushreer56-spec
 
-LinkedIn:
-(Add your LinkedIn profile URL)
-
 ---
-
-## ⭐ Support
-
-If you like this project, consider giving it a ⭐ on GitHub.
