@@ -63,6 +63,10 @@ defaults = {
 
     "user": "",
 
+    "user_email": "",
+
+    "user_id": None,
+
     "dataset": None,
 
     "chat_history": []

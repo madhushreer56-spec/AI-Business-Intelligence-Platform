@@ -9,16 +9,14 @@ load_dotenv()
 API_KEY = os.getenv("GEMINI_API_KEY")
 
 if not API_KEY:
-    raise ValueError("GEMINI_API_KEY not found in .env file.")
+    raise ValueError(
+        "GEMINI_API_KEY not found."
+    )
 
 client = genai.Client(
     api_key=API_KEY
 )
 
-
-# ==========================================================
-# Safe Gemini Call
-# ==========================================================
 
 def generate_content(prompt, retries=3):
 
@@ -29,30 +27,37 @@ def generate_content(prompt, retries=3):
         try:
 
             response = client.models.generate_content(
-                model="gemini-2.5-flash",
+                model="gemini-3.6-flash",
                 contents=prompt
             )
+
+            if not response.text:
+                raise Exception(
+                    "Gemini returned an empty response."
+                )
 
             return response.text.strip()
 
         except Exception as e:
 
             last_error = e
-
             error = str(e)
 
-            # Retry if Gemini is temporarily unavailable
             if "503" in error or "UNAVAILABLE" in error:
 
                 time.sleep(2 * (attempt + 1))
                 continue
 
-            # Retry if rate limited
             if "429" in error:
 
-                time.sleep(5)
+                time.sleep(5 * (attempt + 1))
                 continue
 
-            raise e
+            raise Exception(
+                f"Gemini API Error:\n\n{error}"
+            )
 
-    raise last_error
+    raise Exception(
+        f"Gemini unavailable after {retries} attempts:\n\n"
+        f"{last_error}"
+    )
